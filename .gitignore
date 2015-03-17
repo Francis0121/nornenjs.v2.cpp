@@ -110,4 +110,8 @@ crashlytics-build.properties
 *.x86_64
 *.hex
 
+# Premake4
+premake4
+*.make
+
 

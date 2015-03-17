@@ -9,7 +9,11 @@ include/ (interface for the library *.h)
 tests/ (main.cpp for quick tests) -use cpp unit for this part
 ```
 
-`g++ -I /usr/include/boost/ main.cpp -o main -lboost_regex`
+### Add Boost Library
+
+`g++ main.cpp -o main -lboost_regex`
+
+-lboost_regex | others ...
 
 #### -Idir
 
@@ -37,3 +41,20 @@ library에 대해서 또 하나의 옵션을 알아야 할 필요가 있다.
 library 파일을 찾는 디렉토리에 “dir”이란 디렉토리를 추가하라는 옵션이다.
 예를 들어 -L/usr/local/mylib 라고 하면 /usr/local/mylib라는 디렉토리에서 library 파일을 찾을 수 있게 된다.
 ```
+
+### Include rapidjson library
+
+`g++ -I../lib/rapidjson/include main.cpp -o main.exe -lboost_regex`
+
+
+### Include Websocketpp library
+
+`g++ -I../lib/rapidjson/include -I../lib/websocketpp/src main.cpp -o main.exe -lboost_regex -lboost_system`
+
+add : `-lboost_system`
+
+### Include Boost library 1.48 
+
+`g++ -I../lib/rapidjson/include -I../lib/websocketpp/src -I/home/pi/Downloads/boost_1_48_0 socket_io_client.hpp -o socket.o`
+
+Not user local install library
