@@ -1,0 +1,1 @@
+g++ -I /usr/include/boost/ main.cpp -o main -lboost_regex
